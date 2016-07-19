@@ -1,0 +1,41 @@
+.container{
+  display: flex;
+  justify-content: center;
+  .form-container{
+    padding: 30px;
+    background-color: rgb(64, 64, 64);
+    border-radius: 10px;
+    .add-contact{
+      text-align: center;
+      .contact-image{
+        width: 200px;
+        border-radius: 10px;
+      }
+      .input{
+        padding: 5px;
+        border-radius: 5px;
+        border: 1px solid white;
+      }
+      .full-name{
+        width: 200px;
+      }
+      .phone-number{
+        width: 175px;
+      }
+      .city{
+        width: 150px;
+      }
+      .state{
+        width: 150px;
+      }
+      .submit-contact{
+        padding: 5px 10px 5px 10px;
+        border: transparent;
+        background-color: rgb(153, 255, 51);
+      }
+    }
+  }
+  .contact-list{
+
+  }
+}

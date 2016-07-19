@@ -2,7 +2,9 @@
 import chai from 'chai';
 
 // Import Any Files to Test
+import {Contact} from '../src/js/models/contacts';
 import {List} from '../src/js/models/list';
+import {AppController} from '../src/js/controllers/app-controller';
 // Set Chai Constants
 const expect = chai.expect;
 const should = chai.should();
@@ -10,41 +12,61 @@ const assert = chai.assert;
 
 describe('How contacts list should work', function () {
 
-  describe('List model', function(){
+  describe('Contact model', function(){
 
     it('Should be an instance of Contacts', function(){
-      let newList = new List();
-      expect(newList).to.be.an.instanceof(List);
+      let newContact = new Contact();
+      expect(newContact).to.be.an.instanceof(Contact);
 
     });
 
     it('Should have a full name', function(){
-      let newList = new List('Terry Robinson');
-      expect(newList.name).to.equal('Terry Robinson');
+      let newContact = new Contact('Terry Robinson');
+      expect(newContact.name).to.equal('Terry Robinson');
 
     });
 
     it('Should have a full name and a phone number', function(){
-      let newList = new List('Terry Robinson', '792-214-3344');
-      expect(newList.name).to.equal('Terry Robinson');
-      expect(newList.phone).to.equal('792-214-3344');
+      let newContact = new Contact('Terry Robinson', '792-214-3344');
+      expect(newContact.name).to.equal('Terry Robinson');
+      expect(newContact.phone).to.equal('792-214-3344');
 
     });
 
     it('Should have a full name, a phone number, and a city', function(){
-      let newList = new List('Terry Robinson', '792-214-3344', 'Augusta');
-      expect(newList.name).to.equal('Terry Robinson');
-      expect(newList.phone).to.equal('792-214-3344');
-      expect(newList.city).to.equal('Augusta');
+      let newContact = new Contact('Terry Robinson', '792-214-3344', 'Augusta');
+      expect(newContact.name).to.equal('Terry Robinson');
+      expect(newContact.phone).to.equal('792-214-3344');
+      expect(newContact.city).to.equal('Augusta');
 
     });
 
     it('Should have a full name, a phone number, a city, and a state', function(){
-      let newList = new List('Terry Robinson', '792-214-3344', 'Augusta', 'Georgia');
-      expect(newList.name).to.equal('Terry Robinson');
-      expect(newList.phone).to.equal('792-214-3344');
-      expect(newList.city).to.equal('Augusta');
-      expect(newList.state).to.equal('Georgia');
+      let newContact = new Contact('Terry Robinson', '792-214-3344', 'Augusta', 'Georgia');
+      expect(newContact.name).to.equal('Terry Robinson');
+      expect(newContact.phone).to.equal('792-214-3344');
+      expect(newContact.city).to.equal('Augusta');
+      expect(newContact.state).to.equal('Georgia');
+
+    });
+
+  });
+
+  describe('Should describe how the list works', function() {
+
+    it('Should be an instance of List', function(){
+      let list = new List();
+      expect(list).to.be.an.instanceof(List);
+
+    });
+
+  });
+
+  describe('Should describe how the app controller will work', function(){
+
+    it('Should be an instance of the App Controller', function(){
+      let appController = new AppController();
+      expect(appController).to.be.an.instanceof(AppController);
 
     });
 
