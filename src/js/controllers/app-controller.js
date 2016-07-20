@@ -30,12 +30,14 @@ class AppController {
   }
   contactTemplate(contact){
     return `
-    <li class="contact">
+    <div class="contact">
       <img class="new-contact-picture" src="./images/avatar.png">
-      ${contact.name}<br>
-      ${contact.phone}<br>
-      ${contact.city}, ${contact.state}
-    </li>
+      <div class="contact-info">
+        ${contact.name}<br>
+        ${contact.phone}<br>
+        ${contact.city}, ${contact.state}
+      </div>
+    </div>
     `
   }
 }
