@@ -1,18 +1,19 @@
 .container{
+  display: flex;
+  justify-content: center;
   margin: 25px 25px;
   .form-container{
     padding: 20px;
     background-color: rgb(64, 64, 64);
     border-radius: 10px;
+    display: flex;
+    .contact-image{
+      width: 230px;
+      height: 230px;
+      border-radius: 10px;
+      display: block;
+    }
     .add-contact{
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      .contact-image{
-        width: 200px;
-        height: 200px;
-        border-radius: 10px;
-      }
       .info-box{
         margin: 0px 20px 0px 20px;
         .input{
@@ -34,20 +35,31 @@
         }
       }
       .submit-contact{
+        float: right;
         padding: 5px 10px 5px 10px;
-        border: transparent;
-        background-color: rgb(153, 255, 51);
+        border: 1px solid rgb(0, 34, 102);
+        border-radius: 5px;
+        background-color: rgb(0, 34, 102);
+        color: white;
       }
     }
   }
+}
+.container-one{
   .contact-list{
     list-style: none;
-    margin: 0px 30px 0px 30px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     .contact{
-      border: 1px solid rgb(64, 64, 64);
       text-align: center;
       height: 200px;
-      margin: 10px 0px 10px;
+      margin: 10px;
+      padding: 5px;
+      border: 1px solid rgb(64, 64, 64);
+      border-radius: 10px;
+      background-color: rgb(0, 34, 102);
+      color: white;
       .new-contact-picture{
         width: 200px;
         border-radius: 10px;

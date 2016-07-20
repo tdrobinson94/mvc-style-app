@@ -33,9 +33,9 @@ class AppController {
     <div class="contact">
       <img class="new-contact-picture" src="./images/avatar.png">
       <div class="contact-info">
-        ${contact.name}<br>
-        ${contact.phone}<br>
-        ${contact.city}, ${contact.state}
+        Name: ${contact.name}<br>
+        Phone: ${contact.phone}<br>
+        Place: ${contact.city}, ${contact.state}
       </div>
     </div>
     `
